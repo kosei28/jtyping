@@ -1,0 +1,28 @@
+{
+    "name": "jtyping",
+    "version": "0.0.1",
+    "description": "Japanese typing library",
+    "keywords": [
+        "japanese",
+        "typing"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "author": "kosei28",
+    "license": "MIT",
+    "repository": "https://github.com/kosei28/jtyping.git",
+    "scripts": {
+        "build": "bun build ./src/index.ts --outdir ./dist && dts-bundle-generator ./src/index.ts -o ./dist/index.d.ts"
+    },
+    "type": "module",
+    "devDependencies": {
+        "bun-types": "latest",
+        "dts-bundle-generator": "^9.0.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
