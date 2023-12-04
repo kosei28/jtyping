@@ -156,14 +156,14 @@ export class Jtyping {
         return true;
     }
 
-    public getSuggestKeys(): string {
-        let suggestKeys = this.nextKeysArray[0].keys;
+    public getSuggestedKeys(): string {
+        let suggestedKeys = this.nextKeysArray[0].keys;
         let start = this.typedKanaLength + this.nextKeysArray[0].kanaLength;
         while (start < this.kana.length) {
             const nextKeysArray = getNextKeysArray(this.kana.slice(start));
-            suggestKeys += nextKeysArray[0].keys;
+            suggestedKeys += nextKeysArray[0].keys;
             start += nextKeysArray[0].kanaLength;
         }
-        return suggestKeys;
+        return suggestedKeys;
     }
 }
